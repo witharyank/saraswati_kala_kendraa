@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { siteConfig } from "@/data/config"
-import { MapPin, Phone, Mail, Instagram, Map, Camera } from "lucide-react"
+import { MapPin, Phone, Mail, Camera } from "lucide-react"
 
 export function Footer() {
   return (
