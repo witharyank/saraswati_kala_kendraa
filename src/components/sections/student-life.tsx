@@ -4,6 +4,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { Sparkles, Users, Award, Music } from "lucide-react"
+import Image from "next/image"
 
 export function StudentLife() {
   const events = [
@@ -28,15 +29,12 @@ export function StudentLife() {
             viewport={{ once: true }}
             className="h-[350px] rounded-3xl bg-primary/10 mt-12 relative overflow-hidden flex justify-center items-center shadow-lg border border-border z-10 group"
           >
-             <img 
-              src="/moment-1.jpg" 
+             <Image 
+              src="/images/IMG-20260524-WA0012 (2).jpg" 
               alt="Academy Moment 1" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 400 600'%3E%3Crect fill='%23FF6B00' width='400' height='600' fill-opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='16' fill='%237A1020' text-anchor='middle' alignment-baseline='middle'%3EUpload moment-1.jpg%3C/text%3E%3C/svg%3E";
-              }}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 50vw, 25vw"
             />
           </motion.div>
           
@@ -46,15 +44,12 @@ export function StudentLife() {
             viewport={{ once: true }}
             className="h-[350px] rounded-3xl bg-secondary/10 relative overflow-hidden flex justify-center items-center shadow-lg border border-border z-10 group"
           >
-             <img 
-              src="/moment-2.jpg" 
+             <Image 
+              src="/images/Screenshot_20260614_224615.jpg" 
               alt="Academy Moment 2" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 400 600'%3E%3Crect fill='%237A1020' width='400' height='600' fill-opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='16' fill='%23FF6B00' text-anchor='middle' alignment-baseline='middle'%3EUpload moment-2.jpg%3C/text%3E%3C/svg%3E";
-              }}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 50vw, 25vw"
             />
           </motion.div>
         </div>

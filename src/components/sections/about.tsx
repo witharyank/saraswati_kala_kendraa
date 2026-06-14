@@ -3,7 +3,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { SectionWrapper } from "@/components/section-wrapper"
-import { siteConfig } from "@/data/config"
+import Image from "next/image"
 
 export function About() {
   return (
@@ -68,19 +68,16 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="absolute inset-0 bg-muted"
           >
-            <img 
-              src="/about-image.jpg" // User to upload
-              alt="Students at Saraswati Kala Kendra"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Crect fill='%23FF6B00' width='800' height='400' fill-opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='24' fill='%237A1020' text-anchor='middle' alignment-baseline='middle'%3EUpload about-image.jpg to public folder%3C/text%3E%3C/svg%3E";
-              }}
+            <Image 
+              src="/images/IMG-20240619-WA0035.jpg" 
+              alt="Interior of Saraswati Kala Kendra"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </motion.div>
           
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 pointer-events-none" />
         </div>
 
       </div>

@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/components/section-wrapper"
 import { siteConfig } from "@/data/config"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Palette, Music } from "lucide-react"
+import Image from "next/image"
 
 export function Programs() {
   return (
@@ -27,23 +28,20 @@ export function Programs() {
           viewport={{ once: true }}
           className="group relative rounded-3xl overflow-hidden bg-card border border-border shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col"
         >
-          <div className="h-64 sm:h-80 w-full overflow-hidden relative">
-            <img 
-              src="/dance-class.jpg" 
-              alt="Dance Classes" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Crect fill='%23FF6B00' width='800' height='400' fill-opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='24' fill='%237A1020' text-anchor='middle' alignment-baseline='middle'%3EUpload dance-class.jpg to public folder%3C/text%3E%3C/svg%3E";
-              }}
+          <div className="h-64 sm:h-80 w-full relative">
+            <Image 
+              src="/images/Screenshot_20260614_224550.jpg" 
+              alt="Dance Classes at Saraswati Kala Kendra" 
+              fill
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-lg">
                 <Music className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-white">Dance Classes</h3>
+              <h3 className="font-serif text-3xl font-bold text-white drop-shadow-md">Dance Classes</h3>
             </div>
           </div>
           <div className="p-8 flex flex-col flex-grow">
@@ -75,23 +73,20 @@ export function Programs() {
           transition={{ delay: 0.2 }}
           className="group relative rounded-3xl overflow-hidden bg-card border border-border shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col"
         >
-          <div className="h-64 sm:h-80 w-full overflow-hidden relative">
-            <img 
-              src="/art-class.jpg" 
-              alt="Drawing and Art Classes" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Crect fill='%23D4AF37' width='800' height='400' fill-opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='24' fill='%237A1020' text-anchor='middle' alignment-baseline='middle'%3EUpload art-class.jpg to public folder%3C/text%3E%3C/svg%3E";
-              }}
+          <div className="h-64 sm:h-80 w-full relative">
+            <Image 
+              src="/images/IMG-20250531-WA0074.jpg" 
+              alt="Drawing and Art Classes at Saraswati Kala Kendra" 
+              fill
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-black shrink-0 shadow-lg">
                 <Palette className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-white">Drawing & Art</h3>
+              <h3 className="font-serif text-3xl font-bold text-white drop-shadow-md">Drawing & Art</h3>
             </div>
           </div>
           <div className="p-8 flex flex-col flex-grow">

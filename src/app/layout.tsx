@@ -14,14 +14,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Saraswati Kala Kendra | Premier Dance & Cultural Academy",
-  description: "Nurturing talent, preserving culture, and inspiring confidence through the art of dance. Located in Muzaffarpur, Bihar.",
-  keywords: ["dance academy", "Saraswati Kala Kendra", "cultural arts", "Muzaffarpur", "classical dance", "Bollywood dance"],
+  title: "Saraswati Kala Kendra | Dance & Drawing Classes in Muzaffarpur",
+  description: "Join Saraswati Kala Kendra in Muzaffarpur for Dance Classes, Drawing & Art Education, Cultural Activities, and Creative Development for children and students.",
+  keywords: ["dance academy", "Saraswati Kala Kendra", "cultural arts", "Muzaffarpur", "classical dance", "Bollywood dance", "drawing classes", "art education"],
   openGraph: {
-    title: "Saraswati Kala Kendra | Premier Dance & Cultural Academy",
-    description: "Nurturing talent, preserving culture, and inspiring confidence through the art of dance. Located in Muzaffarpur, Bihar.",
+    title: "Saraswati Kala Kendra | Dance & Drawing Classes in Muzaffarpur",
+    description: "Join Saraswati Kala Kendra in Muzaffarpur for Dance Classes, Drawing & Art Education, Cultural Activities, and Creative Development for children and students.",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: "/og-image.jpg", // Make sure to add this image to public/
+        width: 1200,
+        height: 630,
+        alt: "Saraswati Kala Kendra Academy",
+      },
+    ],
   },
 };
 

@@ -4,6 +4,7 @@ import * as React from "react"
 import { motion, useScroll, useTransform, animate } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/config"
+import Image from "next/image"
 
 function AnimatedCounter({ from, to, duration = 2 }: { from: number, to: number, duration?: number }) {
   const nodeRef = React.useRef<HTMLSpanElement>(null)
@@ -39,16 +40,26 @@ export function Hero() {
           muted
           loop
           playsInline
-          className="object-cover w-full h-full"
-          poster="/fallback-bg.jpg"
+          className="object-cover w-full h-full absolute inset-0 z-10"
+          poster="/images/IMG-20250531-WA0074.jpg"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
+        {/* Fallback Image optimized via next/image in case video fails or on load */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/IMG-20250531-WA0074.jpg" 
+            alt="Group Performance at Saraswati Kala Kendra"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background z-20" />
       </motion.div>
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div className="container relative z-30 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <motion.div
           style={{ y: textY }}
           initial={{ opacity: 0, y: 30 }}
@@ -75,7 +86,7 @@ export function Hero() {
             {siteConfig.description}
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <Button asChild size="lg" className="h-14 px-8 text-lg rounded-full w-full sm:w-auto shadow-xl hover:scale-105 transition-transform duration-300">
               <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer">Join Now</a>
             </Button>
@@ -83,6 +94,17 @@ export function Hero() {
               <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer">Book Trial Class</a>
             </Button>
           </div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/80 text-sm font-medium"
+          >
+            <span className="flex items-center gap-2">📍 Muzaffarpur, Bihar</span>
+            <span className="flex items-center gap-2">💬 WhatsApp Support</span>
+            <span className="flex items-center gap-2">👨‍👩‍👧‍👦 Family Friendly Environment</span>
+          </motion.div>
         </motion.div>
       </div>
     </section>
