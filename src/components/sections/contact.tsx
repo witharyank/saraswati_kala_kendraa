@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { siteConfig } from "@/data/config"
 import { Button } from "@/components/ui/button"
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react"
+import { MapPin, Phone, MessageCircle } from "lucide-react"
 
 export function Contact() {
   return (

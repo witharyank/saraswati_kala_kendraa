@@ -94,7 +94,7 @@ export function Footer() {
           
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-secondary-foreground/60">
             <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-            <p>Nurturing Muzaffarpur's Talent.</p>
+            <p>Nurturing Muzaffarpur&apos;s Talent.</p>
           </div>
         </div>
       </footer>

@@ -24,7 +24,7 @@ export function ServingMuzaffarpur() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">
-            Serving <span className="text-accent">Muzaffarpur's</span> Young Talent
+            Serving <span className="text-accent">Muzaffarpur&apos;s</span> Young Talent
           </h2>
           <p className="text-xl text-primary-foreground/90 font-light mb-8 leading-relaxed">
             At Saraswati Kala Kendra, we are deeply committed to empowering the youth of Muzaffarpur. We provide a platform where raw talent is nurtured into refined skill.

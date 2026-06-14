@@ -41,7 +41,7 @@ export function Testimonials() {
                   <Quote className="absolute bottom-6 right-6 w-12 h-12 text-white/10" />
                   
                   <p className="text-xl md:text-2xl font-serif italic mb-8 leading-relaxed">
-                    "{t.content}"
+                    &quot;{t.content}&quot;
                   </p>
                   
                   <div>

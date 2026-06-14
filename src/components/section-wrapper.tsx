@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 
 interface SectionWrapperProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode

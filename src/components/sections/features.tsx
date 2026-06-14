@@ -41,7 +41,8 @@ export function Features() {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         {siteConfig.features.map((feature, index) => {
-          const IconComponent = (Icons as any)[feature.icon] || Icons.Star;
+          const IconName = feature.icon as keyof typeof Icons;
+          const IconComponent = (Icons[IconName] as React.ElementType) || Icons.Star;
           
           return (
             <motion.div
