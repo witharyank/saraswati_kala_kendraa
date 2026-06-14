@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Saraswati Kala Kendra | Dance & Drawing Classes in Muzaffarpur",
   description: "Join Saraswati Kala Kendra in Muzaffarpur for Dance Classes, Drawing & Art Education, Cultural Activities, and Creative Development for children and students.",
   keywords: ["dance academy", "Saraswati Kala Kendra", "cultural arts", "Muzaffarpur", "classical dance", "Bollywood dance", "drawing classes", "art education"],
+  verification: {
+    google: "gY5g1qm8z9kqntYSZsIuSiEkptjhW4km1ssxBqDTQ10",
+  },
   openGraph: {
     title: "Saraswati Kala Kendra | Dance & Drawing Classes in Muzaffarpur",
     description: "Join Saraswati Kala Kendra in Muzaffarpur for Dance Classes, Drawing & Art Education, Cultural Activities, and Creative Development for children and students.",
