@@ -1,107 +1,99 @@
 # Saraswati Kala Kendra
 
-Official website for Saraswati Kala Kendra, a dance and drawing academy located in Sutapatti, Muzaffarpur, Bihar. The site serves as the primary online presence for the academy, showcasing its programs, gallery, timings, and contact information.
+The official website for Saraswati Kala Kendra -- a dance and drawing academy in Sutapatti, Muzaffarpur, Bihar. Built with Next.js and designed to give the academy a clean, modern online presence.
 
-## About the Academy
+## About
 
-Saraswati Kala Kendra nurtures talent, preserves culture, and inspires confidence through the art of dance and drawing. With over 10 years of excellence and 500+ students trained, the academy offers a safe and family-friendly environment led by experienced instructors.
+Saraswati Kala Kendra has spent over a decade nurturing young talent through dance and drawing. More than 500 students have trained here in a safe, family-friendly setting guided by experienced instructors. The academy's focus is on preserving culture, building confidence, and giving students a platform to perform and exhibit their work.
 
-## Features
+## What the Site Covers
 
-- **Hero Section** -- Full-screen hero with background video and call-to-action buttons
-- **About** -- Overview of the academy's mission and values
-- **Serving Muzaffarpur** -- Local community engagement and presence
-- **Key Highlights** -- Safe environment, experienced instructors, cultural focus, stage opportunities
-- **Programs** -- Detailed information on Dance Classes and Drawing/Art Classes
-- **Gallery** -- Visual showcase of student work and performances
-- **Student Life** -- Glimpse into the academy experience
-- **Testimonials** -- Reviews from parents and students
-- **Timings** -- Weekly class schedule (Monday through Sunday)
-- **Contact** -- Phone, WhatsApp, email, Instagram, and embedded Google Maps
+The website is a single-page layout with the following sections:
+
+- A full-screen hero with a background video and quick-action buttons
+- An overview of the academy's mission and values
+- A section highlighting the academy's roots in the Muzaffarpur community
+- Key highlights including safety, instructor experience, cultural focus, and stage opportunities
+- Detailed program pages for both dance and drawing classes
+- A gallery showcasing student performances and artwork
+- A student life section that captures the day-to-day academy experience
+- Testimonials from parents and students
+- A weekly class schedule
+- Contact details with phone, WhatsApp, email, Instagram, and an embedded map
 
 ## Tech Stack
 
-| Layer         | Technology                                  |
-|---------------|---------------------------------------------|
-| Framework     | Next.js 16                                  |
-| Language      | TypeScript                                  |
-| Styling       | Tailwind CSS 4                              |
-| Animations    | Framer Motion                               |
-| Icons         | Lucide React                                |
-| Carousel      | Embla Carousel                              |
-| Theming       | next-themes (light/dark/system)             |
-| Fonts         | Inter, Playfair Display (via next/font)     |
-| UI Utilities  | clsx, tailwind-merge, Radix UI (react-slot) |
+| Layer        | Technology                                  |
+|--------------|---------------------------------------------|
+| Framework    | Next.js 16                                  |
+| Language     | TypeScript                                  |
+| Styling      | Tailwind CSS 4                              |
+| Animations   | Framer Motion                               |
+| Icons        | Lucide React                                |
+| Carousel     | Embla Carousel                              |
+| Theming      | next-themes (light, dark, and system)       |
+| Fonts        | Inter and Playfair Display via next/font    |
+| UI Utilities | clsx, tailwind-merge, Radix UI              |
 
 ## Project Structure
 
 ```
 saraswati-kala-kendra/
   public/
-    images/             # Static images (gallery, about, etc.)
-    hero-video.mp4      # Hero section background video
-    robots.txt          # Search engine crawling rules
-    sitemap.xml         # Sitemap for SEO
+    images/                Static images for the gallery, about section, etc.
+    hero-video.mp4         Background video for the hero section
+    robots.txt             Crawler directives
+    sitemap.xml            Sitemap for search engines
   src/
     app/
-      globals.css       # Global styles and Tailwind theme
-      layout.tsx        # Root layout with metadata, fonts, and theme provider
-      page.tsx          # Home page assembling all sections
-      head.tsx          # Custom head tags
+      globals.css          Global styles and Tailwind theme configuration
+      layout.tsx           Root layout with metadata, fonts, and theming
+      page.tsx             Home page that assembles all sections
+      head.tsx             Custom head tags
     components/
-      navbar.tsx        # Navigation bar
-      footer.tsx        # Site footer
-      section-wrapper.tsx  # Reusable section wrapper with animations
-      theme-provider.tsx   # Dark/light theme provider
+      navbar.tsx           Top navigation bar
+      footer.tsx           Site footer
+      section-wrapper.tsx  Reusable animated section wrapper
+      theme-provider.tsx   Light and dark mode provider
       sections/
-        hero.tsx        # Hero banner with video background
-        about.tsx       # About the academy
-        serving.tsx     # Serving Muzaffarpur section
-        features.tsx    # Key feature highlights
-        programs.tsx    # Dance and drawing program details
-        gallery.tsx     # Image gallery/carousel
-        student-life.tsx  # Student life showcase
-        testimonials.tsx  # Parent and student reviews
-        timings.tsx     # Weekly class schedule
-        contact.tsx     # Contact form, map, and details
-      ui/               # Reusable UI primitives
+        hero.tsx           Hero banner with video background
+        about.tsx          About the academy
+        serving.tsx        Community presence in Muzaffarpur
+        features.tsx       Key feature highlights
+        programs.tsx       Dance and drawing program details
+        gallery.tsx        Image gallery with carousel
+        student-life.tsx   Student life showcase
+        testimonials.tsx   Parent and student reviews
+        timings.tsx        Weekly class schedule
+        contact.tsx        Contact details, form, and map
+      ui/                  Shared UI primitives
     data/
-      config.ts         # Centralized site configuration (contact, timings, programs, etc.)
+      config.ts            Centralized site configuration
     lib/
-      utils.ts          # Utility functions (cn helper for class merging)
+      utils.ts             Utility functions
 ```
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18 or later
-- npm (comes with Node.js)
-
-### Installation
+You will need Node.js 18 or later.
 
 ```bash
 git clone <repository-url>
 cd saraswati-kala-kendra
 npm install
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser. The page auto-updates as you edit files.
+Then open http://localhost:3000 in your browser. Changes to the source files are reflected automatically.
 
-### Production Build
+To create a production build and serve it locally:
 
 ```bash
 npm run build
 npm start
 ```
 
-### Linting
+To run the linter:
 
 ```bash
 npm run lint
@@ -109,35 +101,15 @@ npm run lint
 
 ## Configuration
 
-All site-wide data is centralized in `src/data/config.ts`. This includes:
-
-- Academy name and description
-- Location and address
-- Contact details (phone, WhatsApp, email)
-- Social media links (Instagram)
-- Academy statistics (rating, years, student count)
-- Weekly class timings
-- Feature highlights
-- Program descriptions and benefits
-- Testimonials
-
-To update any of this information, edit the `siteConfig` object in that file. No code changes are needed elsewhere.
+All of the academy's information -- name, address, contact details, social links, class timings, program descriptions, statistics, and testimonials -- lives in a single file: `src/data/config.ts`. Updating that file is all that is needed to change the content on the site. No other code changes are required.
 
 ## SEO
 
-The site includes the following SEO optimizations:
-
-- Meta title and description tags
-- Open Graph metadata for social sharing
-- Google Search Console verification
-- `robots.txt` for crawler directives
-- `sitemap.xml` for search engine indexing
-- Semantic HTML structure
-- Keyword meta tags
+The site ships with meta title and description tags, Open Graph metadata for social sharing, Google Search Console verification, a `robots.txt`, a `sitemap.xml`, semantic HTML, and relevant keyword tags.
 
 ## Theming
 
-The site supports light mode, dark mode, and system preference detection via `next-themes`. The theme toggle is available in the navigation bar.
+Light mode, dark mode, and automatic system preference detection are all supported out of the box through `next-themes`. A toggle is available in the navigation bar.
 
 ## Contact
 
@@ -148,4 +120,4 @@ The site supports light mode, dark mode, and system preference detection via `ne
 
 ## License
 
-This project is private and proprietary.
+Private and proprietary.
